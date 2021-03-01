@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:checkbox/constants.dart';
-
 import 'package:checkbox/size_config.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -94,13 +94,36 @@ class NavDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: kSecondaryColor.withOpacity(0.3),
               ),
-              child: Icon(
-                Icons.verified_user,
+              child: FaIcon(
+                FontAwesomeIcons.graduationCap,
                 color: Colors.black87,
               ),
             ),
             title: Text(
               'Attendance',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 17,
+              ),
+            ),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Container(
+              height: getProportionateScreenHeight(50),
+              width: getProportionateScreenWidth(40),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: kSecondaryColor.withOpacity(0.3),
+              ),
+              child: Icon(
+                Icons.calendar_today_rounded,
+                color: Colors.black87,
+              ),
+            ),
+            title: Text(
+              'Calender',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
