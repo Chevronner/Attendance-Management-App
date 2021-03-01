@@ -1,3 +1,4 @@
+import 'package:checkbox/screens/calendar/calendar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:checkbox/constants.dart';
 import 'package:checkbox/size_config.dart';
@@ -130,7 +131,9 @@ class NavDrawer extends StatelessWidget {
                 fontSize: 17,
               ),
             ),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.pushNamed(context, Calendar.routeName),
+            },
           ),
           ListTile(
             leading: Container(
