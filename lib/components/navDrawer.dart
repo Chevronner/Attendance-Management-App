@@ -95,9 +95,11 @@ class NavDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: kSecondaryColor.withOpacity(0.3),
               ),
-              child: FaIcon(
-                FontAwesomeIcons.graduationCap,
-                color: Colors.black87,
+              child: Center(
+                child: FaIcon(
+                  FontAwesomeIcons.graduationCap,
+                  color: Colors.black87,
+                ),
               ),
             ),
             title: Text(
