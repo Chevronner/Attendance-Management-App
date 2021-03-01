@@ -3,7 +3,7 @@ import 'package:checkbox/size_config.dart';
 
 import 'package:checkbox/constants.dart';
 
-List<Widget> SideIcons() {
+List<Widget> sideIcons() {
   List<Widget> sideIcons = [
     Padding(
         padding: EdgeInsets.only(right: 15.0),

@@ -23,7 +23,7 @@ class _TimeTableState extends State<TimeTable> {
           ),
         ),
         toolbarHeight: SizeConfig.screenHeight * 0.1,
-        actions: SideIcons(),
+        actions: sideIcons(),
       ),
       body: Center(
         child: Text("Time Table"),

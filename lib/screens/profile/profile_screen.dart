@@ -23,7 +23,7 @@ class _ProfileState extends State<Profile> {
           ),
         ),
         toolbarHeight: SizeConfig.screenHeight * 0.1,
-        actions: SideIcons(),
+        actions: sideIcons(),
       ),
       body: Center(
         child: Text("Profile Page"),

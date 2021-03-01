@@ -24,7 +24,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
         ),
         toolbarHeight: SizeConfig.screenHeight * 0.1,
-        actions: SideIcons(),
+        actions: sideIcons(),
       ),
       body: Body(),
     );

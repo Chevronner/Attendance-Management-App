@@ -27,24 +27,33 @@ class NavDrawer extends StatelessWidget {
                     SizedBox(
                       width: getProportionateScreenWidth(10),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          "Harshit Srivastava",
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                            // color: Colors.white,
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Flexible(
+                            flex: 2,
+                            child: Text(
+                              "Harshit Srivastava",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                // color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "19BCS089",
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
+                          Text(
+                            "19BCS089",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -71,6 +80,8 @@ class NavDrawer extends StatelessWidget {
               'Dashboard',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 17,
               ),
             ),
             onTap: () => {},
@@ -92,6 +103,8 @@ class NavDrawer extends StatelessWidget {
               'Attendance',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 17,
               ),
             ),
             onTap: () => {Navigator.of(context).pop()},
@@ -113,6 +126,8 @@ class NavDrawer extends StatelessWidget {
               'Settings',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 17,
               ),
             ),
             onTap: () => {Navigator.of(context).pop()},
@@ -134,6 +149,8 @@ class NavDrawer extends StatelessWidget {
               'Feedback',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                fontSize: 17,
+                color: Colors.black,
               ),
             ),
             onTap: () => {Navigator.of(context).pop()},
@@ -155,6 +172,8 @@ class NavDrawer extends StatelessWidget {
               'Logout',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                fontSize: 17,
+                color: Colors.black,
               ),
             ),
             onTap: () => {Navigator.of(context).pop()},
