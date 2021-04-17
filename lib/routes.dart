@@ -1,3 +1,5 @@
+import 'package:checkbox/screens/add_attendance/attendance_screen.dart';
+import 'package:checkbox/screens/classroom/classroom_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:checkbox/screens/complete_profile/complete_profile_screen.dart';
 import 'package:checkbox/screens/dashboard/dashboard.dart';
@@ -21,4 +23,6 @@ final Map<String, WidgetBuilder> routes = {
   DashBoard.routeName: (context) => DashBoard(),
   HomeScreen.routeName: (context) => HomeScreen(),
   Calendar.routeName: (context) => Calendar(),
+  Classroom.routeName: (context) => Classroom(),
+  TakeAttendanceScreen.routeName: (context) => TakeAttendanceScreen(),
 };

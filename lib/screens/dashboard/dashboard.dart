@@ -13,20 +13,22 @@ class DashBoard extends StatefulWidget {
 class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: new NavDrawer(),
-      appBar: AppBar(
-        title: Text(
-          "Dashboard",
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w600,
+    return SafeArea(
+      child: Scaffold(
+        drawer: new NavDrawer(),
+        appBar: AppBar(
+          title: Text(
+            "Dashboard",
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.w600,
+            ),
           ),
+          toolbarHeight: SizeConfig.screenHeight * 0.125,
+          actions: sideIcons(),
         ),
-        toolbarHeight: SizeConfig.screenHeight * 0.1,
-        actions: sideIcons(),
+        body: Body(),
       ),
-      body: Body(),
     );
   }
 }
