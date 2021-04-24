@@ -1,13 +1,16 @@
 import 'package:checkbox/screens/add_attendance/attendance_screen.dart';
+import 'package:checkbox/screens/class_analytics/class_analytics_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../size_config.dart';
 
 class ClassroomCard extends StatelessWidget {
   final String subject;
+  final bool path;
   ClassroomCard({
     Key key,
     @required this.subject,
+    this.path,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,10 @@ class ClassroomCard extends StatelessWidget {
         width: getProportionateScreenWidth(350),
         child: GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, TakeAttendanceScreen.routeName);
+            if (path)
+              Navigator.pushNamed(context, TakeAttendanceScreen.routeName);
+            else
+              Navigator.pushNamed(context, ClassAnalytics.routeName);
           },
           child: Card(
             shape: RoundedRectangleBorder(

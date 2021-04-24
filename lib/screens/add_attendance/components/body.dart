@@ -1,3 +1,4 @@
+import 'package:checkbox/classes/createAttendance.dart';
 import 'package:checkbox/components/custom_button.dart';
 import 'package:checkbox/constants.dart';
 import 'package:flutter/material.dart';
@@ -76,9 +77,12 @@ class _BodyState extends State<Body> {
               ),
               CustomButton(
                 text: "Submit",
-                press: () {
+                press: () async {
                   print("Successful");
                   printList();
+                  var x = await createUser("Uma", "23-04-2002", "10:35", "CSE",
+                      registrationNumber, studentNames, attendanceValue);
+                  print(x);
                   Navigator.pop(context);
                 },
               ),

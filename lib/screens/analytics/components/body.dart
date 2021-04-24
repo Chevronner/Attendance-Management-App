@@ -22,11 +22,11 @@ class _BodyState extends State<Body> {
             ),
             ClassroomCard(
               subject: "DBMS",
-              path: true,
+              path: false,
             ),
             ClassroomCard(
               subject: "Operating System",
-              path: true,
+              path: false,
             ),
           ],
         ),

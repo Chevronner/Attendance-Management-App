@@ -1,4 +1,5 @@
 import 'package:checkbox/components/custom_button.dart';
+import 'package:checkbox/screens/analytics/analytics_first_screen.dart';
 import 'package:checkbox/screens/classroom/classroom_screen.dart';
 import 'package:checkbox/size_config.dart';
 import 'package:flutter/material.dart';
@@ -35,9 +36,9 @@ class _BodyState extends State<Body> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CustomButton(
-              text: "Attendance Data",
+              text: "Analytics",
               press: () {
-                print("button pressed");
+                Navigator.pushNamed(context, Analytics.routeName);
               },
             ),
           ),
