@@ -18,7 +18,11 @@ class _BodyState extends State<Body> {
     ];
     return Container(
       child: SfCircularChart(
+        legend: Legend(isVisible: true),
+        tooltipBehavior: TooltipBehavior(enable: true),
+
         series: <CircularSeries>[
+
           // Renders doughnut chart
           DoughnutSeries<ChartData, String>(
               dataSource: chartData,

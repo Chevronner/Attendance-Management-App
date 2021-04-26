@@ -35,6 +35,9 @@ dependencies:
   shared_preferences: ^0.5.12+4
   http: ^0.13.1
   syncfusion_flutter_charts: ^19.1.57+1
+#  amplify_flutter: '<1.0.0'
+#  amplify_auth_cognito: '<1.0.0'
+#  amplify_analytics_pinpoint: '<1.0.0'
 
 dev_dependencies:
   flutter_test:

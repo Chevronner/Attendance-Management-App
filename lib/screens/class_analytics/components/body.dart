@@ -1,4 +1,5 @@
 import 'package:checkbox/classes/chart_data.dart';
+import 'package:checkbox/classes/getAttendance.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -8,16 +9,39 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  var data;
+  var present;
+  var absent;
+
+  Future getData() async {
+    var x = await getAttendance("Uma", "2021-04-26", "CSE");
+
+    print(x["body"]);
+
+    setState(() {
+      present = x["body"][0];
+      absent = x["body"][1];
+    });
+  }
+
+  @override
+  void initState() {
+    getData().whenComplete(() async {});
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    print(absent);
     final List<ChartData> chartData = [
-      ChartData('David', 25, Color.fromRGBO(9, 0, 136, 1)),
-      ChartData('Steve', 38, Color.fromRGBO(147, 0, 119, 1)),
-      ChartData('Jack', 34, Color.fromRGBO(228, 0, 124, 1)),
-      ChartData('Others', 52, Color.fromRGBO(255, 189, 57, 1))
+      ChartData('Present', present, Color.fromRGBO(9, 0, 136, 1)),
+      ChartData('Absent', absent, Color.fromRGBO(147, 0, 119, 1)),
     ];
+    print(absent.runtimeType);
     return Container(
       child: SfCircularChart(
+        legend: Legend(isVisible: true),
+        tooltipBehavior: TooltipBehavior(enable: true),
         series: <CircularSeries>[
           // Renders doughnut chart
           DoughnutSeries<ChartData, String>(
