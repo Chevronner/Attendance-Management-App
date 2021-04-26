@@ -54,7 +54,7 @@ class _BodyState extends State<Body> {
                 registrationNo: "19BEC012",
               ),
               StudentCard(
-                name: "Uttam Kumar jangid Extra word",
+                name: "Uttam Kumar jangid",
                 registrationNo: "19BCS108",
               ),
               StudentCard(
@@ -66,8 +66,8 @@ class _BodyState extends State<Body> {
                 registrationNo: "19BCS040",
               ),
               StudentCard(
-                name: "Satyam Kumar Thakur",
-                registrationNo: "19BEC040",
+                name: "Sejal Rai",
+                registrationNo: "19BCS096",
               ),
               SizedBox(
                 height: getProportionateScreenHeight(20.0),
@@ -97,9 +97,42 @@ class _BodyState extends State<Body> {
   }
 }
 
-List<String> studentNames = [];
-List<String> registrationNumber = [];
-List<String> attendanceValue = [];
+List<String> studentNames = [
+  "Priyam",
+  "Anany Talwad",
+  "Nihar Sanda",
+  "Satyam Kumar Thakur",
+  "Uddesh Krisagar",
+  "Dilip kumar",
+  "Uttam Kumar jangid",
+  "Akshat Mishra",
+  "Divyansh",
+  "Sejal Rai"
+];
+List<String> registrationNumber = [
+  "19BCS089",
+  "19BEC004",
+  "19BCS125",
+  "19BEC040",
+  "19BEC021",
+  "19BEC012",
+  "19BCS108",
+  "19BCS035",
+  "19BCS040",
+  "19BCS096"
+];
+List<String> attendanceValue = [
+  "true",
+  "true",
+  "true",
+  "true",
+  "true",
+  "true",
+  "true",
+  "true",
+  "true",
+  "true"
+];
 
 class StudentCard extends StatefulWidget {
   final String name;
@@ -152,14 +185,16 @@ class _StudentCardState extends State<StudentCard> {
                 "   " +
                 pressAttention.toString());
 
-            if (registrationNumber.contains(widget.registrationNo)) {
-              index = registrationNumber.indexOf(widget.registrationNo);
-              attendanceValue[index] = pressAttention.toString();
-            } else {
-              studentNames.add(widget.name);
-              registrationNumber.add(widget.registrationNo);
-              attendanceValue.add(pressAttention.toString());
-            }
+            // if (registrationNumber.contains(widget.registrationNo)) {
+            //   index = registrationNumber.indexOf(widget.registrationNo);
+            //   attendanceValue[index] = pressAttention.toString();
+            // } else {
+            //   studentNames.add(widget.name);
+            //   registrationNumber.add(widget.registrationNo);
+            //   attendanceValue.add(pressAttention.toString());
+            // }
+            index = registrationNumber.indexOf(widget.registrationNo);
+            attendanceValue[index] = pressAttention.toString();
           },
           child: Padding(
             padding: const EdgeInsets.symmetric(
