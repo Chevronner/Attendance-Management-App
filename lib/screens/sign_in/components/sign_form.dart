@@ -1,3 +1,5 @@
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_flutter/amplify.dart';
 import 'package:flutter/material.dart';
 import 'package:checkbox/components/custom_surfix_icon.dart';
 import 'package:checkbox/components/form_error.dart';
@@ -18,6 +20,9 @@ class _SignFormState extends State<SignForm> {
   String email;
   String password;
   bool remember = false;
+  bool isSignedIn = false;
+  TextEditingController usernameController = new TextEditingController();
+  TextEditingController passwordController = new TextEditingController();
   final List<String> errors = [];
 
   void addError({String error}) {
@@ -71,9 +76,10 @@ class _SignFormState extends State<SignForm> {
           SizedBox(height: getProportionateScreenHeight(20)),
           DefaultButton(
             text: "Continue",
-            press: () {
+            press: () async {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
+
                 // if all are valid then go to success screen
                 Navigator.pushNamed(context, HomeScreen.routeName);
               }

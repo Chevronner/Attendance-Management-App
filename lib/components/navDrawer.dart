@@ -11,59 +11,59 @@ class NavDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      height: SizeConfig.screenHeight * 0.2,
-                      width: SizeConfig.screenWidth * 0.33,
-                      decoration: BoxDecoration(
-                        color: kSecondaryColor.withOpacity(0.1),
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    SizedBox(
-                      width: getProportionateScreenWidth(10),
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Flexible(
-                            flex: 2,
-                            child: Text(
-                              "Harshit Srivastava",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                                // color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "19BCS089",
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            decoration: BoxDecoration(
-              color: kSecondaryColor.withOpacity(0.3),
-            ),
-          ),
+          // DrawerHeader(
+          //   child: Column(
+          //     // mainAxisAlignment: MainAxisAlignment.start,
+          //     children: [
+          //       Row(
+          //         children: [
+          //           Container(
+          //             height: SizeConfig.screenHeight * 0.2,
+          //             width: SizeConfig.screenWidth * 0.33,
+          //             decoration: BoxDecoration(
+          //               color: kSecondaryColor.withOpacity(0.1),
+          //               shape: BoxShape.circle,
+          //             ),
+          //           ),
+          //           SizedBox(
+          //             width: getProportionateScreenWidth(10),
+          //           ),
+          //           Expanded(
+          //             child: Column(
+          //               mainAxisAlignment: MainAxisAlignment.center,
+          //               mainAxisSize: MainAxisSize.min,
+          //               children: [
+          //                 Flexible(
+          //                   flex: 2,
+          //                   child: Text(
+          //                     "Harshit Srivastava",
+          //                     style: TextStyle(
+          //                       fontSize: 16.0,
+          //                       fontWeight: FontWeight.bold,
+          //                       color: Colors.black,
+          //                       // color: Colors.white,
+          //                     ),
+          //                   ),
+          //                 ),
+          //                 Text(
+          //                   "19BCS089",
+          //                   style: TextStyle(
+          //                     fontSize: 16.0,
+          //                     fontWeight: FontWeight.bold,
+          //                     color: Colors.black,
+          //                   ),
+          //                 ),
+          //               ],
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //     ],
+          //   ),
+          //   decoration: BoxDecoration(
+          //     color: kSecondaryColor.withOpacity(0.3),
+          //   ),
+          // ),
           ListTile(
             leading: Container(
               height: getProportionateScreenHeight(50),

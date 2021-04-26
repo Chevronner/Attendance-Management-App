@@ -27,35 +27,12 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Sign in with your email and password  \nor continue with social media",
+                    "Sign in with your email and password ",
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: SizeConfig.screenHeight * 0.06),
                   SignForm(),
                   SizedBox(height: SizeConfig.screenHeight * 0.04),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SocialCard(
-                        icon: "assets/icons/google-icon.svg",
-                        press: () {},
-                      ),
-                      SizedBox(
-                        width: SizeConfig.screenWidth * 0.01,
-                      ),
-                      SocialCard(
-                        icon: "assets/icons/facebook-2.svg",
-                        press: () {},
-                      ),
-                      SizedBox(
-                        width: SizeConfig.screenWidth * 0.01,
-                      ),
-                      SocialCard(
-                        icon: "assets/icons/twitter.svg",
-                        press: () {},
-                      ),
-                    ],
-                  ),
                   SizedBox(height: getProportionateScreenHeight(20)),
                   NoAccountText(),
                   SizedBox(height: getProportionateScreenHeight(20)),

@@ -28,6 +28,10 @@ class _BodyState extends State<Body> {
               subject: "Operating System",
               path: false,
             ),
+            ClassroomCard(
+              subject: "Software Engineering",
+              path: false,
+            ),
           ],
         ),
       ),

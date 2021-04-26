@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-attendanceapp-dev-142845-authRole",
+      "UnauthRoleArn": "arn:aws:iam::635335197733:role/amplify-attendanceapp-dev-142845-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::635335197733:role/amplify-attendanceapp-dev-142845-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-attendanceapp-dev-142845-deployment",
+      "UnauthRoleName": "amplify-attendanceapp-dev-142845-unauthRole",
+      "StackName": "amplify-attendanceapp-dev-142845",
+      "StackId": "arn:aws:cloudformation:ap-south-1:635335197733:stack/amplify-attendanceapp-dev-142845/9e635c50-a66d-11eb-98ae-0699d6eba328",
+      "AmplifyAppId": "d3vralasnj7hvz"
+    }
+  }
+}

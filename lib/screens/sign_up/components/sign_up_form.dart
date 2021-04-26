@@ -1,3 +1,6 @@
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_flutter/amplify.dart';
+// import 'package:amplify_analytics_pinpoint/amplify_analytics_pinpoint.dart';
 import 'package:flutter/material.dart';
 import 'package:checkbox/components/custom_surfix_icon.dart';
 import 'package:checkbox/components/default_button.dart';
@@ -19,6 +22,7 @@ class _SignUpFormState extends State<SignUpForm> {
   String conformPassword;
   bool remember = false;
   final List<String> errors = [];
+  bool isSignUpComplete;
 
   void addError({String error}) {
     if (!errors.contains(error))
@@ -49,10 +53,27 @@ class _SignUpFormState extends State<SignUpForm> {
           SizedBox(height: getProportionateScreenHeight(40)),
           DefaultButton(
             text: "Continue",
-            press: () {
+            press: () async {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
                 // if all are valid then go to success screen
+                try {
+                  Map<String, String> userAttributes = {
+                    'email': email,
+                    // 'phone_number': '+15559101234',
+                    // additional attributes as needed
+                  };
+                  SignUpResult res = await Amplify.Auth.signUp(
+                      username: email,
+                      password: password,
+                      options:
+                          CognitoSignUpOptions(userAttributes: userAttributes));
+                  setState(() {
+                    isSignUpComplete = res.isSignUpComplete;
+                  });
+                } on AuthException catch (e) {
+                  print(e.message);
+                }
                 Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
